@@ -1,0 +1,65 @@
+{
+    "parser": "vue-eslint-parser",
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:jest/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "parser": "@typescript-eslint/parser",
+        "project": "./tsconfig.json",
+        "createDefaultProgram": true
+    },
+    "plugins": [
+        "vue",
+        "jest"
+    ],
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "warn"
+        ],
+        "no-mixed-spaces-and-tabs": [
+            "off"
+        ],
+        "camelcase": [
+            "off"
+        ],
+        "jest/excpect-expect": [
+            "off"
+        ],
+        "@typescript-eslint/require-await": [
+            "warn"
+        ],
+        "@typescript-eslint/no-misused-promises": [
+            "warn",
+            {
+            "checksConditionals": false
+            }
+        ],
+        "@typescript-eslint/camelcase": [
+            "warn"
+        ],
+        "@typescript-eslint/no-inferrable-types": [
+            "warn"
+        ]
+    }
+}
